@@ -319,8 +319,7 @@ class MainWC: NSWindowController {
             ]
         } else if virtMachine.config.architecture == "x86_64" {
             arguments += [
-                "-M", "pc",
-                "-accel", "tcg,tb-size=32",
+                "-M", 	"accel=hvf",
                 "-name", virtMachine.config.vmname,
                 "-smp", "cpus=" + String(virtMachine.config.cores) + ",sockets=1,cores=" + String(virtMachine.config.cores) + ",threads=1",
                 "-m", String(virtMachine.config.ram) + "M",

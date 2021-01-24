@@ -7,7 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		B633E36EB39ED956691F1478 /* Pods_ACVM.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1978F9AFBE672B763161F8B2 /* Pods_ACVM.framework */; };
+		805F732E25BE12E200BA1201 /* qemu-system-x86_64 in Resources */ = {isa = PBXBuildFile; fileRef = 805F732D25BE12E200BA1201 /* qemu-system-x86_64 */; };
+		809C72A125BAAF08002E6B7A /* Pods_ACVM.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1978F9AFBE672B763161F8B2 /* Pods_ACVM.framework */; };
+		809C72A225BAAF08002E6B7A /* Pods_ACVM.framework in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 1978F9AFBE672B763161F8B2 /* Pods_ACVM.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		CC032B622574D9A6002CE035 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC032B612574D9A6002CE035 /* AppDelegate.swift */; };
 		CC032B642574D9A6002CE035 /* VMConfigVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC032B632574D9A6002CE035 /* VMConfigVC.swift */; };
 		CC032B662574D9A7002CE035 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CC032B652574D9A7002CE035 /* Assets.xcassets */; };
@@ -54,6 +56,7 @@
 				CC032BA22574EAE5002CE035 /* libpixman-1.0.dylib in Embed Libraries */,
 				CC032B9D2574EADF002CE035 /* libglib-2.0.0.dylib in Embed Libraries */,
 				CC032B9E2574EAE1002CE035 /* libgmodule-2.0.0.dylib in Embed Libraries */,
+				809C72A225BAAF08002E6B7A /* Pods_ACVM.framework in Embed Libraries */,
 			);
 			name = "Embed Libraries";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -63,6 +66,7 @@
 /* Begin PBXFileReference section */
 		02A7AB5C4544449BE84EB25A /* Pods-ACVM.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ACVM.debug.xcconfig"; path = "Target Support Files/Pods-ACVM/Pods-ACVM.debug.xcconfig"; sourceTree = "<group>"; };
 		1978F9AFBE672B763161F8B2 /* Pods_ACVM.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ACVM.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		805F732D25BE12E200BA1201 /* qemu-system-x86_64 */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = "qemu-system-x86_64"; sourceTree = "<group>"; };
 		C4F993756CA48707ED838C96 /* Pods-ACVM.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ACVM.release.xcconfig"; path = "Target Support Files/Pods-ACVM/Pods-ACVM.release.xcconfig"; sourceTree = "<group>"; };
 		CC032B5E2574D9A6002CE035 /* ACVM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ACVM.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC032B612574D9A6002CE035 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -103,7 +107,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B633E36EB39ED956691F1478 /* Pods_ACVM.framework in Frameworks */,
+				809C72A125BAAF08002E6B7A /* Pods_ACVM.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -168,6 +172,7 @@
 				CC032B7F2574DE50002CE035 /* EFI */,
 				CC032B7C2574DDD6002CE035 /* pc-bios */,
 				FB159BFA2581DF3E00BA28F2 /* qemu-system-aarch64 */,
+				805F732D25BE12E200BA1201 /* qemu-system-x86_64 */,
 				FB678E342581DFC100573606 /* qemu-img */,
 			);
 			path = ACVM;
@@ -268,6 +273,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CC032B7D2574DDD6002CE035 /* pc-bios in Resources */,
+				805F732E25BE12E200BA1201 /* qemu-system-x86_64 in Resources */,
 				CC032B812574DE69002CE035 /* QEMU_EFI.fd in Resources */,
 				CC032B662574D9A7002CE035 /* Assets.xcassets in Resources */,
 				CC032B692574D9A7002CE035 /* Main.storyboard in Resources */,
@@ -479,11 +485,11 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = ACVM/ACVM.entitlements;
-				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_IDENTITY = "Mac Developer";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 15;
-				DEVELOPMENT_TEAM = LYYD96F2J8;
+				DEVELOPMENT_TEAM = XD96QX9758;
 				ENABLE_HARDENED_RUNTIME = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -513,11 +519,11 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = ACVM/ACVM.entitlements;
-				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_IDENTITY = "Mac Developer";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 15;
-				DEVELOPMENT_TEAM = LYYD96F2J8;
+				DEVELOPMENT_TEAM = XD96QX9758;
 				ENABLE_HARDENED_RUNTIME = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -550,7 +556,7 @@
 				CC032B6D2574D9A7002CE035 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 		CC032B6E2574D9A7002CE035 /* Build configuration list for PBXNativeTarget "ACVM" */ = {
 			isa = XCConfigurationList;
@@ -559,7 +565,7 @@
 				CC032B702574D9A7002CE035 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 /* End XCConfigurationList section */
 	};

@@ -264,18 +264,13 @@ class MainWC: NSWindowController {
         
         var icon = NSImage()
         icon = NSImage(named: "qemu")!
-        
+
         let qemu = NSWorkspace()
         qemu.setIcon(icon, forFile: Bundle.main.url(
-            forResource: "qemu-system-aarch64",
+            forResource: "qemu-system-" + virtMachine.config.architecture,
             withExtension: nil
         )!.path)
-        
-        /*qemu.setIcon(icon, forFile: Bundle.main.url(
-            forResource: "qemu-system-x86_64",
-            withExtension: nil
-        )!.path)*/
-        
+                
         let process = Process()
         process.executableURL = Bundle.main.url(
             forResource: "qemu-system-" + virtMachine.config.architecture,
@@ -326,19 +321,17 @@ class MainWC: NSWindowController {
             arguments += [
                 "-M", "pc",
                 "-accel", "tcg,tb-size=32",
-                "-cpu", "host",
                 "-name", virtMachine.config.vmname,
                 "-smp", "cpus=" + String(virtMachine.config.cores) + ",sockets=1,cores=" + String(virtMachine.config.cores) + ",threads=1",
                 "-m", String(virtMachine.config.ram) + "M",
-                "-bios", efiURL.path,
                 "-device", virtMachine.config.graphicOptions,
-                "-device", "qemu-xhci,id=xhci", //,p2=8,p3=8",
+                "-device", "qemu-xhci,id=xhci",
+                "-usb",
                 "-device", "usb-kbd",
                 "-device", "usb-tablet",
                 "-device", "virtio-rng-pci",
-                "-nic", "user" + nicOptions,
+                "-nic", "user,model=virtio" + nicOptions,
                 "-rtc", "base=localtime,clock=host",
-                "-drive", "file=\(virtMachine.config.nvram),format=raw,if=pflash,index=1",
                 "-device", "intel-hda",
                 "-device", "hda-duplex",
                 "-chardev", "socket,id=mon0,host=localhost,port=\(port),server,nowait",

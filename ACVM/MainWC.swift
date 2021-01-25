@@ -298,20 +298,21 @@ class MainWC: NSWindowController {
         if virtMachine.config.architecture == "aarch64" {
             arguments += [
                 "-M", "virt,highmem=no",
-                "-accel", "hvf",
-                "-cpu", "host",
+                "-accel", "tcg,tb-size=32",
+                "-cpu", "max",
                 "-name", virtMachine.config.vmname,
                 "-smp", "cpus=" + String(virtMachine.config.cores) + ",sockets=1,cores=" + String(virtMachine.config.cores) + ",threads=1",
                 "-m", String(virtMachine.config.ram) + "M",
                 "-bios", efiURL.path,
                 "-device", virtMachine.config.graphicOptions,
                 "-device", "qemu-xhci,id=xhci", //,p2=8,p3=8",
+                "-usb",
                 "-device", "usb-kbd",
                 "-device", "usb-tablet",
                 "-device", "virtio-rng-pci",
                 "-nic", "user,model=virtio" + nicOptions,
                 "-rtc", "base=localtime,clock=host",
-                "-drive", "file=\(virtMachine.config.nvram),format=raw,if=pflash,index=1",
+//                "-drive", "file=\(virtMachine.config.nvram),format=raw,if=pflash,index=1",
                 "-device", "intel-hda",
                 "-device", "hda-duplex",
                 "-chardev", "socket,id=mon0,host=localhost,port=\(port),server,nowait",
@@ -419,7 +420,7 @@ class MainWC: NSWindowController {
             
             arguments += args
         }
-        
+
         process.arguments = arguments
         process.qualityOfService = .userInteractive
         

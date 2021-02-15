@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="17700" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="RBg-j4-FIX">
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="RBg-j4-FIX">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="17700"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="17701"/>
         <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -948,6 +948,14 @@ virtio-gpu is recommended for Linux guests.</string>
                                                         <action selector="didTapX64Button:" target="XfG-lQ-9wD" id="1CG-9O-w9H"/>
                                                     </connections>
                                                 </button>
+                                                <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PSO-gx-ZaW">
+                                                    <rect key="frame" x="323" y="71" width="121" height="18"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                                    <buttonCell key="cell" type="check" title="start full screen" bezelStyle="regularSquare" imagePosition="left" inset="2" id="x5X-di-lUd">
+                                                        <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                                        <font key="font" metaFont="system"/>
+                                                    </buttonCell>
+                                                </button>
                                             </subviews>
                                         </view>
                                     </tabViewItem>
@@ -1252,7 +1260,7 @@ DQ
                                 </connections>
                             </button>
                             <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xt0-K2-naS">
-                                <rect key="frame" x="154" y="381" width="40.5" height="42"/>
+                                <rect key="frame" x="154" y="381" width="41" height="42"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" imagePosition="overlaps" alignment="center" imageScaling="proportionallyUpOrDown" inset="2" id="i92-QT-bi1">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -1339,7 +1347,7 @@ DQ
                                 </connections>
                             </button>
                             <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vhr-mX-MDh">
-                                <rect key="frame" x="353" y="382.5" width="40.5" height="40"/>
+                                <rect key="frame" x="353" y="383" width="41" height="40"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" imagePosition="overlaps" alignment="center" state="on" imageScaling="proportionallyUpOrDown" inset="2" id="Jh9-oB-sz8">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -1391,6 +1399,7 @@ DQ
                         <outlet property="removeCD2Button" destination="R99-re-Hzz" id="OdD-M9-Jwz"/>
                         <outlet property="removeCDButton" destination="Ia5-Sv-hWB" id="3Tb-aE-tQI"/>
                         <outlet property="resetNVRAMButton" destination="7dO-Vc-vt4" id="Dfg-R5-o0H"/>
+                        <outlet property="startFullScreen" destination="PSO-gx-ZaW" id="SuP-iv-B0u"/>
                         <outlet property="tabView" destination="IAI-X5-IhU" id="GcS-S8-Ks8"/>
                         <outlet property="unhideMousePointer" destination="SW6-Fx-2XD" id="4ew-EO-eew"/>
                         <outlet property="useRDPPortForward" destination="6BN-82-kvN" id="m5b-0g-fOP"/>
@@ -1697,17 +1706,17 @@ seconds</string>
         <segue reference="oEB-Gt-Nuw"/>
     </inferredMetricsTieBreakers>
     <resources>
-        <image name="NSAddTemplate" width="14" height="13"/>
+        <image name="NSAddTemplate" width="15" height="13"/>
         <image name="NSAdvanced" width="32" height="32"/>
-        <image name="NSIconViewTemplate" width="13" height="12"/>
+        <image name="NSIconViewTemplate" width="14" height="12"/>
         <image name="NSMobileMe" width="32" height="32"/>
-        <image name="NSSlideshowTemplate" width="18" height="14"/>
+        <image name="NSSlideshowTemplate" width="19" height="14"/>
         <image name="NSStopProgressFreestandingTemplate" width="15" height="15"/>
-        <image name="NSTouchBarPauseTemplate" width="11" height="13"/>
+        <image name="NSTouchBarPauseTemplate" width="12" height="13"/>
         <image name="NSTouchBarPlayTemplate" width="12" height="13"/>
-        <image name="NSTouchBarRecordStopTemplate" width="14" height="13"/>
-        <image name="desktopcomputer" catalog="system" width="16" height="13"/>
-        <image name="internaldrive.fill" catalog="system" width="15" height="11"/>
+        <image name="NSTouchBarRecordStopTemplate" width="15" height="13"/>
+        <image name="desktopcomputer" catalog="system" width="17" height="13"/>
+        <image name="internaldrive.fill" catalog="system" width="16" height="11"/>
         <image name="network" catalog="system" width="13" height="13"/>
     </resources>
 </document>

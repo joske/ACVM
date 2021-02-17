@@ -179,6 +179,9 @@ class VMConfigVC: NSViewController, FileDropViewDelegate {
         }
 
         baseTextField.stringValue = virtMachine.config.base
+        if (baseTextField.stringValue == "") {
+            baseTextField.stringValue = mainImageFilePath
+        }
         snapshotTextField.stringValue = virtMachine.config.snapshot
         
         if virtMachine.config.unhideMousePointer {
